@@ -1,43 +1,59 @@
 * {
-  font-family: "Nanum Gothic", sans-serif;
+  box-sizing: border-box;
 }
-/* HEADER */
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #888;
+  cursor: pointer;
+}
+
 header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20 auto 10;
   position: relative;
-  min-width: 1000px;
 }
-header .inner {
+
+h1 {
+  font-size: 1em;
+  font-family: "맑은 고딕", "Malgun Gothic", "돋움", Dotum;
+}
+
+header .headBox {
   position: relative;
   width: 980px;
   height: 35px;
   margin: 0 auto;
   padding: 20px 0 10px;
 }
-header .logo {
+
+header .logo a {
   overflow: hidden;
+  background: url(../images/icon_set1_n2.png) no-repeat -280px 2px;
   width: 0;
   height: 24px;
-  padding: 0 0 0 108px;
   line-height: 24px;
-  background: url("../images/icon_set1_n2.png") no-repeat -280px 2px;
+  padding: 0 0 0 108px;
   white-space: nowrap;
 }
-header .menu {
+
+header .header-menu {
+  display: flex;
   position: absolute;
+  top: 0;
   right: 0;
-  top: 15px;
+  padding: 20px;
 }
 
-header .menu ul.wrap {
-  display: block;
+header .header-menu ul.menu {
+  display: flex;
 }
-header .menu ul.wrap li {
+
+header .header-menu ul.menu li {
   position: relative;
-  float: left;
-}
-header .menu ul.wrap li::before {
-  content: "";
-  width: 1px;
-  height: 12px;
-  position: absolute;
 }
