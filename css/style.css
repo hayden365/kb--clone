@@ -4,27 +4,39 @@
 
 body {
   font-family: sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: #888;
-  cursor: pointer;
-}
-
-header {
-  width: 100%;
-  margin: 0 auto;
-  padding: 20 auto 10;
-  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 h1 {
+  display: block;
   font-size: 1em;
   font-family: "맑은 고딕", "Malgun Gothic", "돋움", Dotum;
 }
 
-header .headBox {
+a {
+  text-decoration: none;
+  color: #222;
+  cursor: pointer;
+  display: inline-block;
+}
+
+ul {
+  display: block;
+  list-style-type: 1em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+header {
+  position: relative;
+}
+
+header .inner {
   position: relative;
   width: 980px;
   height: 35px;
@@ -32,22 +44,35 @@ header .headBox {
   padding: 20px 0 10px;
 }
 
+header .logo {
+  height: auto;
+}
+
 header .logo a {
   overflow: hidden;
-  background: url(../images/icon_set1_n2.png) no-repeat -280px 2px;
   width: 0;
   height: 24px;
-  line-height: 24px;
   padding: 0 0 0 108px;
+  line-height: 24px;
+  background: url(../images/icon_set1_n2.png) no-repeat -280px 2px;
   white-space: nowrap;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin: auto 0;
 }
 
 header .header-menu {
   display: flex;
   position: absolute;
-  top: 0;
   right: 0;
-  padding: 20px;
+  top: 15px;
+}
+header .header-menu a {
+  font-size: 14px;
+  line-height: 30px;
+  padding: 0 8px;
+  letter-spacing: -1px;
 }
 
 header .header-menu ul.menu {
@@ -56,4 +81,86 @@ header .header-menu ul.menu {
 
 header .header-menu ul.menu li {
   position: relative;
+}
+
+header .header-menu ul.menu li.m3::before,
+header .header-menu ul.menu li.m4::before,
+header .header-menu ul.menu li.m8::before,
+header .header-menu ul.menu li.m9::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #888;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .header-menu ul.menu li.m8::after,
+header .header-menu ul.menu li.m9::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin: -2px 0 0;
+  border-right: 3px solid transparent;
+  border-left: 3px solid transparent;
+  border-top: 4px solid #000;
+}
+
+header .header-menu .search a {
+  display: block;
+  width: 0;
+  padding: 0 0 0 30px;
+  line-height: 30px;
+  overflow: hidden;
+  background: url(../images/icon_set1_n2.png) no-repeat -285px -85px;
+  white-space: nowrap;
+}
+
+header ul.sign {
+  overflow: visible;
+  position: absolute;
+  left: 50%;
+  top: 57px;
+  width: 920px;
+  margin: 0 0 0 -490px;
+  padding: 0 30px;
+  display: flex;
+}
+
+header ul.sign .out-box {
+  color: #222;
+  font-size: 14px;
+  height: 26px;
+  line-height: 25px;
+  padding: 0 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+header ul.sign_2 {
+  display: none;
+}
+
+header ul.sign .show li.hover_on:hover + .sign_2 {
+  display: block;
+  position: absolute;
+  left: -18px;
+  width: 108px;
+  padding-top: 9px;
+}
+
+header ul.sign_2 a {
+  display: flex;
+  float: left;
+  width: 40px;
+  height: 23px;
+  text-align: center;
+  line-height: 23px;
+  margin: 7px;
+  padding: 0;
+  bottom: 0;
+  background-color: #fff;
+  color: #403c3c;
 }
