@@ -24,12 +24,12 @@ a {
 
 ul {
   display: block;
-  list-style-type: 1em;
+  /* list-style-type: 1em;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  padding-inline-start: 40px;
+  padding-inline-start: 40px; */
 }
 
 header {
@@ -37,6 +37,7 @@ header {
 }
 
 header .inner {
+  box-sizing: content-box;
   position: relative;
   width: 980px;
   height: 35px;
@@ -64,6 +65,7 @@ header .logo a {
 
 header .header-menu {
   display: flex;
+  overflow: hidden;
   position: absolute;
   right: 0;
   top: 15px;
@@ -76,29 +78,39 @@ header .header-menu a {
 }
 
 header .header-menu ul.menu {
+  float: left;
   display: flex;
-}
-
-header .header-menu ul.menu li {
   position: relative;
 }
 
-header .header-menu ul.menu li.m3::before,
-header .header-menu ul.menu li.m4::before,
-header .header-menu ul.menu li.m8::before,
-header .header-menu ul.menu li.m9::before {
-  content: "";
-  width: 1px;
-  height: 12px;
-  background-color: #888;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+header .header-menu ul.menu > li {
+  position: relative;
 }
 
-header .header-menu ul.menu li.m8::after,
-header .header-menu ul.menu li.m9::after {
+header .header-menu ul.menu > li.m3::before,
+header .header-menu ul.menu > li.m4::before,
+header .header-menu ul.menu > li.m8::before,
+header .header-menu ul.menu > li.m9::before {
+  content: "";
+  display: block;
+  float: left;
+  width: 1px;
+  height: 12px;
+  margin: 10.5px 0 9px -7px;
+  background-color: #c0c0c2;
+}
+
+header .header-menu ul.menu > li.m3,
+header .header-menu ul.menu > li.m4,
+header .header-menu ul.menu > li.m8 {
+  margin: 0 0 0 15px;
+}
+header .header-menu ul.menu > li.m9::before {
+  margin-left: 0;
+}
+
+header .header-menu ul.menu > li.m8 > a::after,
+header .header-menu ul.menu > li.m9 > a::after {
   content: "";
   position: absolute;
   right: 10px;
@@ -107,6 +119,56 @@ header .header-menu ul.menu li.m9::after {
   border-right: 3px solid transparent;
   border-left: 3px solid transparent;
   border-top: 4px solid #000;
+}
+
+header .header-menu ul.menu > li.m8 a,
+header .header-menu ul.menu > li.m9 a {
+  position: relative;
+  padding-right: 24px;
+}
+
+header .menu > li .sub-menu {
+  display: none;
+  right: 50%;
+  top: 24px;
+  width: 109px;
+  margin: 0 -76px 0 0;
+  padding: 6px 0 0;
+}
+
+header .menu > li:hover .sub-menu {
+  display: block;
+}
+
+header .menu > li .sub-menu > ul {
+  overflow: hidden;
+  padding: 13px 10px 15px;
+  border-top: 2px solid #ffe85a;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 0 rgb(0 0 0 / 10%);
+}
+
+header .menu > li.m8 .sub-menu.list {
+  min-width: 665px;
+}
+
+header .menu > li .sub-menu.list > ul > li .title {
+  display: block;
+  margin: 0 0 5px;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 30px;
+  border-bottom: 1px solid #e7e4e2;
+  color: #53473f;
+  font-weight: bold;
+}
+
+header .menu > li .sub-menu > ul > li a {
+  display: block;
+  padding: 0 10px;
+  font-size: 13px;
+  line-height: 27px;
+  white-space: nowrap;
 }
 
 header .header-menu .search a {
@@ -119,48 +181,12 @@ header .header-menu .search a {
   white-space: nowrap;
 }
 
+/* SIGN */
 header ul.sign {
-  overflow: visible;
   position: absolute;
   left: 50%;
   top: 57px;
   width: 920px;
   margin: 0 0 0 -490px;
   padding: 0 30px;
-  display: flex;
-}
-
-header ul.sign .out-box {
-  color: #222;
-  font-size: 14px;
-  height: 26px;
-  line-height: 25px;
-  padding: 0 10px;
-  background: #fff;
-  border: 1px solid #ddd;
-}
-header ul.sign_2 {
-  display: none;
-}
-
-header ul.sign .show li.hover_on:hover + .sign_2 {
-  display: block;
-  position: absolute;
-  left: -18px;
-  width: 108px;
-  padding-top: 9px;
-}
-
-header ul.sign_2 a {
-  display: flex;
-  float: left;
-  width: 40px;
-  height: 23px;
-  text-align: center;
-  line-height: 23px;
-  margin: 7px;
-  padding: 0;
-  bottom: 0;
-  background-color: #fff;
-  color: #403c3c;
 }
