@@ -57,6 +57,13 @@ header .logo a {
   margin: auto 0;
 }
 
+header .nav-gnb > li .submenu ul > li a:hover,
+header .nav-gnb > li .submenu ul > li a:focus {
+  background: #ffe85a;
+  text-decoration: none;
+  color: #000;
+}
+
 header .nav-gnb {
   position: absolute;
   display: flex;
@@ -216,7 +223,7 @@ header .nav-gnb > li .submenu.list > ul > li + li {
   margin: 0 0 0 15px;
 }
 
-/* SUBMENU - GLOBAL */
+/* SUBMENU - GLOBAL_language */
 
 header .nav-gnb > li.m9 .submenu {
   min-width: 328px;
@@ -234,15 +241,13 @@ header .nav-gnb > li.m9 .submenu > ul > li ul.langList {
 }
 
 header .nav-gnb > li.m9 .submenu > ul > li ul li {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  float: left;
   width: 150px;
 }
 
 header .nav-gnb > li.m9 .submenu > ul > li ul.langList li a {
   position: relative;
-  padding-left: 39px;
+  padding-left: 39px !important;
   line-height: 38px !important;
 }
 header .nav-gnb > li.m9 .submenu > ul > li ul.langList li a::before {
@@ -254,23 +259,19 @@ header .nav-gnb > li.m9 .submenu > ul > li ul.langList li a::before {
   margin: -12px 0;
   width: 24px;
   height: 24px;
-  background: url(../images/icon_set1_n2.png) no-repeat 0 0;
+  background: url(../images/icon_set_n1.png) no-repeat 0 0;
   border-radius: 50%;
 }
-
-header .nav-gnb > li.m9 .submenu > ul > li ul.langList li.lang_eng {
-  width: 50%;
-}
-header .nav-gnb > li.m9 .submenu > ul > li ul.langList li.lang_eng a::before {
-  background: url(../images/icon_set1_n2.png) no-repeat 0 0;
+header .nav-gnb > li.m9 .submenu > ul > li ul.langList li.lang_en a::before {
+  background: url(../images/bg_flag.png) no-repeat 0 0;
   background-position: 0 0;
 }
 
 header .nav-gnb > li.m9 .submenu > ul > li ul.langList li.lang_cn {
-  position: absolute;
-
+  position: absolute !important;
+  left: 165px;
   top: 0;
-  width: 50%;
+  width: 150px;
 }
 
 header .nav-gnb > li.m9 .submenu > ul > li ul.langList li.lang_cn a::before {
@@ -286,6 +287,75 @@ header .nav-gnb > li.m9 .submenu > ul > li ul.langList li.lang_jn a::before {
   background-position: 0 -300px;
 }
 
+/* SUBMENU-GLOBAL_nation */
+
+header .nav-gnb > li.m9 .submenu ul li[class*="nation"] a {
+  position: relative;
+  padding: 0 0 0 40px;
+}
+
+header .nav-gnb > li.m9 .submenu ul li a {
+  line-height: 38px;
+}
+
+header .nav-gnb > li.m9 .submenu ul li[class*="nation"] a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  margin: -13px 0 0;
+  background: url(../images/icon_set1_n2.png) no-repeat 0 0;
+}
+
+header .nav-gnb > li .submenu ul > li a[target="_blank"]::after {
+  content: "";
+  overflow: hidden;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 0 0 6px;
+  background: url(../images/icon_set1_n2.png) no-repeat -445px -5px;
+}
+
+header .nav-gnb > li.m9 .submenu ul li.nation2 a:before {
+  background-position: -160px 0;
+}
+
+header .nav-gnb > li.m9 .submenu ul li.nation3 a:before {
+  background-position: -40px 0;
+}
+
+header .nav-gnb > li.m9 .submenu ul li.nation4 a:before {
+  background-position: -200px 0;
+}
+
+header .nav-gnb > li.m9 .submenu ul li.nation5 a:before {
+  background-position: -80px 0;
+}
+
+header .nav-gnb > li.m9 .submenu ul li.nation6 a:before {
+  background-position: -240px 0;
+}
+
+header .nav-gnb > li.m9 .submenu ul li.nation7 a:before {
+  background-position: -120px 0;
+}
+
+header .nav-gnb > li.m9 .submenu ul li.nation8 a:before {
+  background-position: -400px 0;
+}
+
+header .nav-gnb > li.m9 .submenu ul li.nation9 a:before {
+  background-position: 0 -230px;
+}
+
+header .nav-gnb > li.m9 .submenu ul li.nation10 a:before {
+  background-position: -39px -230px;
+}
+
 /* MENU - 통합검색 */
 header .nav-gnb li.search > a {
   display: block;
@@ -299,10 +369,99 @@ header .nav-gnb li.search > a {
 
 /* SIGN */
 header ul.sign {
+  overflow: visible;
   position: absolute;
   left: 50%;
   top: 57px;
   width: 920px;
   margin: 0 0 0 -490px;
   padding: 0 30px;
+}
+
+header ul.sign > li {
+  float: left;
+  line-height: 28px;
+}
+
+header ul.sign > li:first-child a {
+  color: #222;
+}
+
+header ul.sign > li a {
+  font-size: 14px;
+  height: 26px;
+  line-height: 25px;
+  padding: 0 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #000;
+}
+
+header ul.sign > li + li {
+  margin: 0 0 0 -1px;
+}
+
+header ul.sign li.signm {
+  position: relative;
+}
+
+header ul.sign li.signm .signm_sub {
+  display: none;
+  position: absolute;
+  left: -18px;
+  width: 108px;
+  padding-top: 9px;
+  z-index: 999;
+}
+
+header ul.sign li.signm:hover .signm_sub {
+  display: block;
+}
+
+header ul.sign > li.signm .signm_sub a {
+  display: block;
+  float: left;
+  width: 40px;
+  height: 23px !important;
+  text-align: center;
+  line-height: 23px !important;
+  margin: 7px;
+  padding: 0 !important;
+  border: 0;
+  color: #403c3c;
+}
+
+header ul.sign > li.signm .signm_sub a:hover {
+  background-color: #ffe85a !important;
+  color: #222;
+}
+
+header ul.sign li.signm .signm_sub::before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  width: 9px;
+  height: 6px;
+  margin-left: -4px;
+  background: url(../images/bg_submenu_triangle.gif) no-repeat 0 0;
+}
+
+header ul.sign li.signm .signm_sub a:first-child:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 18px;
+  height: 19px;
+  border-right: 1px solid #e0e0e0;
+}
+
+header ul.sign li.signm .signm_sub:after {
+  display: block;
+  content: "";
+  height: 35px;
+  border: 1px solid #b3b3b3;
+  background-color: #fff;
 }
