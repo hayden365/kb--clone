@@ -656,11 +656,8 @@ header ul.sign li.signm .signm_sub:after {
   padding: 20px 10px;
 }
 
-.navbar1 ul li {
-  float: left;
-}
-
 .navbar1 ul.mm1 {
+  display: flex;
   background: #ffce0b;
   width: 344px;
   padding: 19px 10px 21px;
@@ -675,6 +672,7 @@ header ul.sign li.signm .signm_sub:after {
 }
 
 .navbar1 ul.mm2 {
+  display: flex;
   width: 596px;
 }
 
@@ -701,15 +699,18 @@ header ul.sign li.signm .signm_sub:after {
 
 /* MID MENU - NAV BAR2 */
 .navbar2 {
+  display: flex;
   overflow: hidden;
   width: 980px;
   margin: 20px auto 0;
 }
 
 .navbar2 > .nav_section {
-  float: left;
   width: 335px;
   padding-left: 125px;
+}
+
+.mid_menu > .nav_section {
   position: relative;
   min-height: 26px;
   margin: 0 auto;
@@ -726,6 +727,35 @@ header ul.sign li.signm .signm_sub:after {
   position: absolute;
   left: 30px;
   top: 35px;
+}
+
+.navbar2 > .nav_section h2 {
+  font-size: 20px;
+  line-height: 26px;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.navbar2 > .nav_section .list-board {
+  margin-top: -6;
+}
+
+.navbar2 > .nav_section .list-board a {
+  display: block;
+  overflow: hidden;
+  padding: 7px 1px 7px 0;
+}
+
+.navbar2 > .nav_section .list-board a > span:first-child {
+  overflow: hidden;
+  max-width: 70%;
+  color: #666;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.navbar2 > .nav_section:first-child .list-board a > span:first-child {
+  max-width: 80%;
 }
 
 .navbar2 > .nav_section .sub {
