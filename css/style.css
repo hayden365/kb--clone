@@ -18,6 +18,11 @@ a {
   display: inline-block;
 }
 
+a:visited {
+  color: #5a5a5a;
+  text-decoration: none;
+}
+
 ul {
   display: block;
 }
@@ -631,7 +636,7 @@ header ul.sign li.signm .signm_sub:after {
   padding: 20px 10px;
 }
 
-.mid_menu ul li a {
+.navbar1 ul li a {
   padding: 0 25px;
   font-size: 16px;
   line-height: 40px;
@@ -705,16 +710,16 @@ header ul.sign li.signm .signm_sub:after {
   margin: 20px auto 0;
 }
 
-.navbar2 > .nav_section {
-  width: 335px;
-  padding-left: 125px;
-}
-
 .mid_menu > .nav_section {
   position: relative;
   min-height: 26px;
   margin: 0 auto;
   padding: 35px 30px 35px 180px;
+}
+
+.navbar2 > .nav_section {
+  width: 335px;
+  padding-left: 125px;
 }
 
 .navbar2 > .nav_section:first-child {
@@ -738,11 +743,11 @@ header ul.sign li.signm .signm_sub:after {
 }
 
 .navbar2 > .nav_section .list-board {
-  margin-top: -6;
+  margin-top: -6px;
 }
 
 .navbar2 > .nav_section .list-board a {
-  display: block;
+  display: flex;
   overflow: hidden;
   padding: 7px 1px 7px 0;
 }
@@ -756,6 +761,18 @@ header ul.sign li.signm .signm_sub:after {
 }
 .navbar2 > .nav_section:first-child .list-board a > span:first-child {
   max-width: 80%;
+}
+
+.navbar2 > .nav_section .list-board a > span ~ span {
+  float: right;
+  padding-top: 1px;
+  font-size: 12px;
+  color: #929292;
+}
+
+.navbar2 > .nav_section .list-board a > span {
+  display: inline-block;
+  letter-spacing: -1px;
 }
 
 .navbar2 > .nav_section .sub {
