@@ -1,4 +1,4 @@
-/* COMMON */
+/* COMON */
 
 body {
   overflow-x: hidden;
@@ -647,15 +647,13 @@ header ul.sign li.signm .signm_sub:after {
 }
 
 .navbar1 ul {
-  float: left;
-  display: block;
+  display: flex;
   overflow: hidden;
   height: 40px;
   padding: 20px 10px;
 }
 
 .navbar1 ul.mm1 {
-  display: flex;
   background: #ffce0b;
   width: 344px;
   padding: 19px 10px 21px;
@@ -670,16 +668,15 @@ header ul.sign li.signm .signm_sub:after {
 }
 
 .navbar1 ul.mm2 {
-  display: flex;
   width: 596px;
 }
 
-.navbar1 ul.mm1 + ul li + li {
+.navbar1 ul.mm2 li + li {
   position: relative;
   margin: 0 0 0 1px;
 }
 
-.navbar1 ul.mm1 + ul li + li::before {
+.navbar1 ul.mm2 li + li::before {
   content: "";
   display: block;
   position: absolute;
@@ -815,7 +812,7 @@ header ul.sign li.signm .signm_sub:after {
 }
 
 .navbar3 .swiper-container ul.swiper-wrapper {
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   width: 300%;
@@ -825,10 +822,11 @@ header ul.sign li.signm .signm_sub:after {
 .navbar3 .swiper-container ul > li {
   float: none;
   position: relative;
-  width: 308px;
+  width: 308px !important;
   height: 100%;
   background: #fff;
   border: 1px solid #ddd;
+  margin: 0;
 }
 
 .navbar3 .swiper-container ul > li + li {
@@ -859,7 +857,7 @@ header ul.sign li.signm .signm_sub:after {
 .navbar3 .swiper-container ul > li a > span:first-child::before,
 .navbar3 .swiper-container ul > li a > span:first-child::after {
   content: "";
-  display: none;
+  display: block;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -909,6 +907,35 @@ header ul.sign li.signm .signm_sub:after {
   height: 21px;
 }
 
+.navbar3 .swiper-container ul > li a em {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 8px 10px 0;
+  min-width: 50px;
+  height: 22px;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.navbar3 .swiper-container ul > li a > span:first-child::after {
+  bottom: -10px;
+  background-position: 0 -125px;
+  transition: all 0.3s;
+}
+
+.navbar3 .swiper-container ul > li a:hover,
+.navbar3 .swiper-container ul > li a:hover {
+  box-shadow: 5px 5px 12px 1px rgb(0 0 0 /10%);
+}
+
+.navbar3 .swiper-container ul > li a:hover > span:first-child::after,
+.navbar3 .swiper-container ul > li a:focus > span:first-child::after {
+  bottom: 0;
+}
+
 /* i1 */
 .navbar3 .swiper-container ul > li.i1 a > span:first-child {
   background-color: #c9d5a1;
@@ -922,37 +949,133 @@ header ul.sign li.signm .signm_sub:after {
   background: url(../images/icon_set8_obj.png) no-repeat 0 0;
 }
 
-.navbar3 .swiper-container ul > li a > span::after {
+.navbar3 .swiper-container ul > li.i1 a > span::before {
+  background-position: left 21px !important;
+}
+
+.navbar3 .swiper-container ul > li.i1 a em {
+  background-color: #768447;
+}
+
+.navbar3 .swiper-container ul > li.i1 a > span::after {
   background-position: left -125px !important;
 }
+
+/* i2 */
+.navbar3 .swiper-container ul > li.i2 a > span:first-child {
+  background-color: #c7d4e4;
+}
+
+.navbar3 .swiper-container ul > li.i2 a > span::before {
+  background-position: -300px 0;
+}
+
+.navbar3 .swiper-container ul > li.i2 a em {
+  background-color: #677e9c;
+}
+
+.navbar3 .swiper-container ul > li.i2 a > span::after {
+  background-position: -300px -375px;
+}
+
+/* i3 */
+.navbar3 .swiper-container ul > li.i3 a > span:first-child {
+  background-color: #8fdeec;
+}
+
+.navbar3 .swiper-container ul > li.i3 a > span::before {
+  background-position: -141px -260px;
+}
+
+.navbar3 .swiper-container ul > li.i3 a em {
+  background-color: #267aa3;
+}
+
+.navbar3 .swiper-container ul > li.i3 a > span::after {
+  background-position: -150px -375px;
+}
+
 /* i4 */
 .navbar3 .swiper-container ul > li.i4 a > span:first-child {
   background-color: #c3c9e7;
 }
 
 .navbar3 .swiper-container ul > li.i4 a > span::before {
-  display: block;
   background-position: 0 -250px;
-}
-
-.navbar3 .swiper-container ul > li.i4 a > span::after {
-  display: block;
-  background-position: 0 -375px;
 }
 
 .navbar3 .swiper-container ul > li.i4 a em {
   background-color: #7879b9;
 }
 
-.navbar3 .swiper-container ul > li.i4 a em {
+.navbar3 .swiper-container ul > li.i4 a > span::after {
+  background-position: 0 -375px;
+}
+
+/* i5 */
+.navbar3 .swiper-container ul > li.i5 a > span:first-child {
+  background-color: #dcd3c8;
+}
+
+.navbar3 .swiper-container ul > li.i5 a em {
+  background-color: #8a7963;
+}
+
+/* i6 */
+.navbar3 .swiper-container ul > li.i6 a > span:first-child {
+  background-color: #c3dee7;
+}
+
+.navbar3 .swiper-container ul > li.i6 a > span::before {
+  background-position: -150px 0;
+}
+
+.navbar3 .swiper-container ul > li.i6 a em {
+  background-color: #558493;
+}
+
+.navbar3 .swiper-container ul > li.i6 a > span::after {
+  background-position: -150px -125px;
+}
+/* i7 */
+.navbar3 .swiper-container ul > li.i7 a > span:first-child {
+  background-color: #e4cf9c;
+}
+
+.navbar3 .swiper-container ul > li.i7 a > span::before {
+  background-position: -450px 0;
+}
+
+.navbar3 .swiper-container ul > li.i7 a em {
+  background-color: #ba8e41;
+}
+
+.navbar3 .swiper-container ul > li.i7 a > span::after {
+  background-position: -450px -125px;
+}
+/* navbar3 area-con */
+.navbar3 .area-con {
+  display: block;
+  position: relative;
+}
+
+.navbar3 .area-con .swiper-button-prev,
+.navbar3 .area-con .swiper-button-next {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 8px 10px 0;
-  min-width: 50px;
-  height: 22px;
-  line-height: 1;
-  color: #fff;
-  text-align: center;
-  z-index: 1;
+  box-sizing: border-box;
+  color: #91908c;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MID_MENU - NAVBAR4 */
+.navbar4 .section {
+  padding: 30px 0 28px 167px;
+  padding-right: 0;
+  width: 813px;
+}
+
+.navbar4 .seciton > ul {
+  margin: 0 -18px;
+  display: flex;
 }

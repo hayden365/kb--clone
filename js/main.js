@@ -1,9 +1,7 @@
-const swiper = new Swiper(".navbar3 .area-con", {
+const swiper = new Swiper(".swiper-container", {
   // Optional parameters
   loop: true,
-  slidesPerView: 3,
-  spaceBetween: 10,
-  centeredSlides: true,
+  slidesPerView: auto,
   autoplay: {
     delay: 10000,
   },
