@@ -385,6 +385,7 @@ header .nav-gnb li.search > a {
 /* SIGN */
 header ul.sign {
   overflow: visible;
+  display: flex;
   position: absolute;
   left: 50%;
   top: 57px;
@@ -394,7 +395,6 @@ header ul.sign {
 }
 
 header ul.sign > li {
-  float: left;
   line-height: 28px;
 }
 
@@ -402,7 +402,7 @@ header ul.sign > li:first-child a {
   color: #222;
 }
 
-header ul.sign > li a {
+header ul.sign > li > a {
   font-size: 14px;
   height: 26px;
   line-height: 25px;
@@ -433,25 +433,7 @@ header ul.sign li.signm:hover .signm_sub {
   display: block;
 }
 
-header ul.sign > li.signm .signm_sub a {
-  display: block;
-  float: left;
-  width: 40px;
-  height: 23px !important;
-  text-align: center;
-  line-height: 23px !important;
-  margin: 7px;
-  padding: 0 !important;
-  border: 0;
-  color: #403c3c;
-}
-
-header ul.sign > li.signm .signm_sub a:hover {
-  background-color: #ffe85a !important;
-  color: #222;
-}
-
-header ul.sign li.signm .signm_sub::before {
+header ul.sign li.signm .wrapsub::before {
   display: block;
   content: "";
   position: absolute;
@@ -463,6 +445,28 @@ header ul.sign li.signm .signm_sub::before {
   background: url(../images/bg_submenu_triangle.gif) no-repeat 0 0;
 }
 
+header ul.sign li.signm .signm_sub .wrapsub {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #b3b3b3;
+  height: 35px;
+}
+header ul.sign > li.signm .wrapsub a {
+  width: 40px;
+  height: 23px;
+  text-align: center;
+  line-height: 23px;
+  padding: 7px;
+  color: #403c3c;
+  border: none;
+}
+
+header ul.sign > li.signm .signm_sub a:hover {
+  background-clip: content-box;
+  background-color: #ffe85a;
+  color: #222;
+}
+
 header ul.sign li.signm .signm_sub a:first-child:after {
   content: "";
   display: block;
@@ -471,14 +475,6 @@ header ul.sign li.signm .signm_sub a:first-child:after {
   top: 18px;
   height: 19px;
   border-right: 1px solid #e0e0e0;
-}
-
-header ul.sign li.signm .signm_sub:after {
-  display: block;
-  content: "";
-  height: 35px;
-  border: 1px solid #b3b3b3;
-  background-color: #fff;
 }
 
 /* 상단 비주얼 */
@@ -638,6 +634,7 @@ header ul.sign li.signm .signm_sub:after {
 }
 
 .navbar1 {
+  display: flex;
   overflow: hidden;
   width: 980px;
   height: 80px;
@@ -646,8 +643,9 @@ header ul.sign li.signm .signm_sub:after {
   box-shadow: 0 15px 30px 0 rgb(0 0 0 / 10%);
 }
 
-.navbar1 ul {
-  display: flex;
+.navbar1 ul.mm_container {
+  display: inline-flex;
+  flex-wrap: nowrap;
   overflow: hidden;
   height: 40px;
   padding: 20px 10px;
@@ -694,35 +692,16 @@ header ul.sign li.signm .signm_sub:after {
 
 /* MID MENU - NAV BAR2 */
 .navbar2 {
-  overflow: hidden;
+  display: flex;
   width: 980px;
   margin: 20px auto 0;
+  justify-content: space-around;
 }
 
-.mid_menu > .nav_section {
+.navbar2 .nav_section {
   position: relative;
-  width: 770px;
-  min-height: 26px;
-  margin: 0 auto;
-  padding: 35px 30px 35px 180px;
-}
-
-.navbar2 > .nav_section {
-  float: left;
-  width: 335px;
-  padding-left: 125px;
-}
-
-.navbar2 > .nav_section:first-child {
-  width: 317px;
-  margin-right: 7px;
-}
-
-.navbar2 > .nav_section h2,
-.navbar2 > .nav_section .sub {
-  position: absolute;
-  left: 30px;
-  top: 35px;
+  display: flex;
+  padding: 35px 30px 35px 0;
 }
 
 .navbar2 > .nav_section h2 {
@@ -733,12 +712,26 @@ header ul.sign li.signm .signm_sub:after {
   letter-spacing: -1px;
 }
 
+.left_wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80px;
+  padding: 20px;
+}
+
+.navbar2 .nav_section .list-board {
+  min-width: 317px;
+}
+
 .navbar2 > .nav_section .list-board {
   margin-top: -6px;
 }
 
-.navbar2 > .nav_section .list-board a {
-  display: block;
+.navbar2 .nav_section .list-board a {
+  display: flex;
+  justify-content: space-between;
   overflow: hidden;
   padding: 7px 1px 7px 0;
 }
@@ -750,12 +743,8 @@ header ul.sign li.signm .signm_sub:after {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.navbar2 > .nav_section:first-child .list-board a > span:first-child {
-  max-width: 80%;
-}
 
 .navbar2 > .nav_section .list-board a > span ~ span {
-  float: right;
   padding-top: 1px;
   font-size: 12px;
   color: #929292;
@@ -766,7 +755,7 @@ header ul.sign li.signm .signm_sub:after {
   letter-spacing: -1px;
 }
 
-.mid_menu > .nav_section .sub {
+.mid_menu > .nav_section .left_wrap .sub {
   left: 32px;
   top: 70px;
   padding-right: 14px;
@@ -774,23 +763,17 @@ header ul.sign li.signm .signm_sub:after {
   color: #929292;
 }
 
-.mid_menu > .nav_section .sub::before,
 .mid_menu > .nav_section .sub::after {
   content: "";
-  display: block;
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid #929292;
+  border-right: 1px solid #929292;
+  display: inline-block;
   position: absolute;
-  top: 50%;
-  right: 1px;
-  margin: -3px 0;
-  width: 0;
-  height: 0;
-  border: 4px solid transparent;
-  border-left-color: #fff;
-}
-
-.mid_menu > .nav_section .sub::before {
-  right: 0;
-  border-left-color: #929292;
+  top: 67px;
+  right: 45px;
+  transform: rotate(45deg);
 }
 
 /* MID MENU - NAVBAR3 */
@@ -822,7 +805,7 @@ header ul.sign li.signm .signm_sub:after {
 .navbar3 .swiper-container ul > li {
   float: none;
   position: relative;
-  width: 308px !important;
+  width: 308px;
   height: 100%;
   background: #fff;
   border: 1px solid #ddd;
@@ -1069,13 +1052,93 @@ header ul.sign li.signm .signm_sub:after {
 }
 
 /* MID_MENU - NAVBAR4 */
+
 .navbar4 .section {
-  padding: 30px 0 28px 167px;
-  padding-right: 0;
-  width: 813px;
+  display: flex;
+  justify-content: center;
+  flex-basis: 813px;
 }
 
-.navbar4 .seciton > ul {
-  margin: 0 -18px;
+.navbar4 .section .wrap_col {
+  position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80px;
+  padding: 20px;
+}
+
+.navbar4 .section .wrap_col .sub {
+  left: 32px;
+  top: 70px;
+  padding-right: 14px;
+  font-size: 12px;
+  color: #929292;
+}
+
+.navbar4 .section .wrap_col .sub::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid #929292;
+  border-right: 1px solid #929292;
+  display: inline-block;
+  position: absolute;
+  top: 64px;
+  right: 45px;
+  transform: rotate(45deg);
+}
+
+.navbar4 .section ul.nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar4 .section ul.nav-list li {
+  width: 105px;
+  text-align: center;
+}
+
+.navbar4 .section ul.nav-list li a {
+  display: block;
+  padding: 7px 0;
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+}
+.navbar4 .section ul.nav-list li a::before {
+  content: "";
+  display: block;
+  margin: 0 auto 6px;
+  width: 52px;
+  height: 52px;
+  background: url(../images/icon_set2_n.png) no-repeat 0 0;
+}
+
+.navbar4 .section ul.nav-list li a.icon2::before {
+  background-position: -52px 0;
+}
+
+.navbar4 .section ul.nav-list li a.icon3::before {
+  background-position: -104px 0;
+}
+
+.navbar4 .section ul.nav-list li a.icon4::before {
+  background-position: -156px 0;
+}
+
+.navbar4 .section ul.nav-list li a.icon5::before {
+  background-position: -208px 0;
+}
+
+.navbar4 .section ul.nav-list li a.icon6::before {
+  background-position: -260px 0;
+}
+
+.navbar4 .section ul.nav-list li a.icon7::before {
+  background-position: -312px 0;
+}
+
+.navbar4 .section ul.nav-list li a.icon8::before {
+  background-position: -364px 0;
 }

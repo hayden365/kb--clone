@@ -8,10 +8,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
     <link
   rel="stylesheet"
@@ -162,8 +161,11 @@
             <li class="signm">
               <a href="javascript:void(0)">인증센터</a>
               <div class="signm_sub">
+                <div class="wrapsub">
                 <a href="javascript:void(0)"><span>개인</span></a>
+                
                 <a href="javascript:void(0)"><span>기업</span></a>
+              </div>
               </div>
             </li>
           </ul>
@@ -198,7 +200,7 @@
       </div>
       <div class="mid_menu navbar1">
         <h2 class="read">빠른메뉴</h2>
-        <ul class="mm1">
+        <ul class="mm_container mm1">
           <li>
             <a href="javascript:void(0)">
               전체계좌조회
@@ -215,7 +217,7 @@
             </a>
           </li>
         </ul>
-        <ul class="mm2">
+        <ul class="mm_container mm2">
           <li>
             <a href="javascript:void(0)">
               보안센터
@@ -245,8 +247,10 @@
       </div>
       <div class="mid_menu navbar2">
         <div class="nav_section">
-          <h2>새소식</h2>
-
+          <div class="left_wrap">
+            <h2>새소식</h2>
+          <a href="javascript:void(0)" class="sub" title="새소식 바로가기">바로가기</a>
+          </div>
           <ul class="list-board">
             <li>
               <a href="javascript:void(0)" target="_blank" title="새창 열기">
@@ -270,11 +274,15 @@
               </a>
             </li>
           </ul>
-          <a href="javascript:void(0)" class="sub" title="새소식 바로가기">바로가기</a>
+          
         </div>
         <div class="nav_section">
-          <h2>이벤트</h2>
+          <div class="left_wrap">
 
+          <h2>이벤트</h2>
+          <a href="javascript:void(0)" class="sub" title="새소식 바로가기">바로가기</a>
+          
+          </div>
           <ul class="list-board">
             <li>
               <a href="javascript:void(0)" target="_blank" title="새창 열기">
@@ -298,7 +306,7 @@
               </a>
             </li>
           </ul>
-          <a href="javascript:void(0)" class="sub" title="새소식 바로가기">바로가기</a>
+          
         </div>
       </div>
       <div class="mid_menu navbar3">
@@ -433,19 +441,25 @@
       </div>
       <div class="mid_menu navbar4">
         <div class="section">
+          <div class="wrap_col">
         <h2>금융상품</h2>
-        <ul class="nav-list">
-          <li><a href="javascript:void(0)">예금</a></li>
-          <li><a href="javascript:void(0)">펀드</a></li>
-          <li><a href="javascript:void(0)">대출</a></li>
-          <li><a href="javascript:void(0)">신탁</a></li>
-          <li><a href="javascript:void(0)">ISA</a></li>
-          <li><a href="javascript:void(0)">보험/공제</a></li>
-          <li><a href="javascript:void(0)">골드</a></li>
-          <li><a href="javascript:void(0)">외화예금</a></li>
         <a href="javascript:void(0)" class="sub" title="금융상품 바로가기">바로가기</a>
       </div>
+        <ul class="nav-list">
+          <li><a href="javascript:void(0)" class="icon1">예금</a></li>
+          <li><a href="javascript:void(0)" class="icon2">펀드</a></li>
+          <li><a href="javascript:void(0)" class="icon3">대출</a></li>
+          <li><a href="javascript:void(0)" class="icon4">신탁</a></li>
+          <li><a href="javascript:void(0)" class="icon5">ISA</a></li>
+          <li><a href="javascript:void(0)" class="icon6">보험/공제</a></li>
+          <li><a href="javascript:void(0)" class="icon7">골드</a></li>
+          <li><a href="javascript:void(0)" class="icon8">외화예금</a></li>
+        
       </div>
+      </div>
+      <div class="mid_menu navbar5">
+
+      </div>      
 
       <div class="footer"></div>
     </div>
