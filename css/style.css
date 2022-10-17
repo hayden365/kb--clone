@@ -29,8 +29,7 @@ strong {
   width: 1px;
   height: 1px;
   position: absolute;
-  float: left;
-  font-size: 1px;
+  font-size: 0;
 }
 
 /* HEADER */
@@ -1403,6 +1402,11 @@ footer ul.f-nav li + li:before {
   background: #bebebe;
 }
 
+footer ul.f-nav li + li:nth-last-child(2)::before {
+  content: "";
+  width: 0;
+}
+
 footer ul.f-nav li a strong {
   font-weight: 700;
 }
@@ -1410,7 +1414,7 @@ footer ul.f-nav li a strong {
 footer .info-group {
   display: flex;
   justify-content: space-between;
-  margin: 17px 0 25px;
+  margin: 17px 0 20px;
   width: 100%;
 }
 
@@ -1474,6 +1478,7 @@ footer ul.f-list li .info {
   box-sizing: border-box;
   background: #fff;
   border: 1px solid #bbb;
+  margin-bottom: -1px;
 }
 
 footer ul.f-list li:first-child .info {
@@ -1497,44 +1502,32 @@ footer ul.f-list li.ic1 .info {
 }
 
 footer ul.f-list li.ic1 .info > dl {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 33% auto;
+  height: 100%;
+  margin: 0 15px;
 }
 
-footer ul.f-list li.ic1 .info > dl > dt {
+footer ul.f-list li.ic1 .info dt {
+  grid-column: 1;
   color: #7d5735;
   font-weight: 700;
-  width: 33%;
   padding-top: 1em;
 }
 
-footer ul.f-list li.ic1 .info > dd {
+footer ul.f-list li.ic1 .info dd {
+  grid-column: 2;
   display: flex;
-  margin: 0;
   padding-top: 1em;
+  font-weight: 700;
 }
 
-footer ul.f-list li.ic1 .info > dd + dd {
-  width: 100%;
-  padding-top: 0;
-}
-
-footer ul.f-list li.ic1 .info > dt + dd:not(:nth-child(2)) {
-  width: 66%;
-}
-
-footer ul.f-list li.ic1 .info > dd + dd::before {
-  width: 33%;
-  content: "";
-  padding-top: 0;
-}
-
-footer ul.f-list li.ic1 .info > dl > dd > span {
+footer ul.f-list li.ic1 .info dd li span {
   font-weight: 400;
-  display: block;
+}
+
+footer ul.f-list li.ic1 .info dd li + li {
+  margin: 10px 0 0;
 }
 
 footer .info-group .info-sns ul {
@@ -1566,4 +1559,46 @@ footer .info-group .info-sns ul li.ic3 a {
 
 footer .info-group .info-sns ul li.ic4 a {
   background-position: -120px -40px;
+}
+
+footer .wrap-end {
+  display: flex;
+}
+
+footer .copy {
+  font-size: 13px;
+  line-height: 21px;
+  margin: auto 0;
+}
+
+footer .info-mark {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+}
+
+footer .info-mark li {
+  overflow: hidden;
+}
+
+footer .info-mark li span {
+  width: 0;
+  height: 40px;
+  white-space: nowrap;
+  color: transparent;
+  font-size: 0;
+  overflow: hidden;
+}
+
+footer .info-mark li.ic1 span {
+  padding: 0 0 0 145px;
+  display: block;
+  background: url(../images/intro_logo_ncsi_2021.gif) no-repeat 50% 50%;
+}
+
+footer .info-mark li.ic2 span {
+  padding: 0 0 0 65px;
+  display: block;
+  background: url(../images/wa_mark_2022.png) no-repeat 0 0;
+  background-size: auto 100%;
 }
