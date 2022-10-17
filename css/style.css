@@ -24,10 +24,6 @@ strong {
   display: inline-block;
 }
 
-/* ul {
-  display: block;
-} */
-
 .read {
   overflow: hidden;
   width: 1px;
@@ -1157,13 +1153,12 @@ header ul.sign li.signm .signm_sub a:first-child:after {
 
 .navbar5 .left-side {
   display: grid;
-  justify-content: space-evenly;
 }
 .navbar5 .section_nav5 {
   display: flex;
   width: 725px;
-  min-height: 26px;
   margin: 0 auto;
+  min-height: 26px;
   padding: 35px 0;
 }
 
@@ -1221,7 +1216,7 @@ header ul.sign li.signm .signm_sub a:first-child:after {
 .navbar5 .section_nav5 + .section_nav5::before {
   content: "";
   position: absolute;
-  left: 30px;
+  left: 0;
   top: 5px;
   right: 0;
   border-top: 1px dotted #ccc;
@@ -1230,9 +1225,7 @@ header ul.sign li.signm .signm_sub a:first-child:after {
 .navbar5 li.toggle-area .ui-toggle {
   overflow: hidden;
   position: relative;
-  padding-left: 14px;
-  margin: -3px 0 0 4px;
-  width: 0;
+  width: 16px;
   height: 16px;
   border: 1px solid #bebebe;
   border-radius: 2px;
@@ -1243,11 +1236,12 @@ header ul.sign li.signm .signm_sub a:first-child:after {
   content: "";
   width: 5px;
   height: 5px;
-  border: 1px solid #000;
+  border-top: 1px solid #000;
+  border-right: 1px solid#000;
   position: absolute;
-  top: 6px;
-  left: 3px;
-  transform: rotate(95deg);
+  top: 3px;
+  left: 4px;
+  transform: rotate(135deg);
 }
 
 .navbar5 li.toggle-area > ul {
@@ -1299,4 +1293,277 @@ header ul.sign li.signm .signm_sub a:first-child:after {
   font-size: 13px;
   color: #8d8d8d;
   letter-spacing: -1px;
+}
+
+/* MIDMENU - NAVBAR6 */
+.navbar6 {
+  margin: 40px 0 0;
+}
+
+.navbar6 .section {
+  width: 960px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.navbar6 .section h2 {
+  padding: 20px;
+}
+.navbar6 .section h2 span {
+  font-size: 22px;
+  vertical-align: baseline;
+}
+
+.navbar6 .section ul.list6 {
+  display: flex;
+  width: 960px;
+  justify-content: space-around;
+}
+
+.navbar6 ul.list6 li {
+  text-align: center;
+  font-size: 13px;
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar6 li a::before {
+  content: "";
+  margin: 10px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url(../images/icon_set3_220224.png) no-repeat 0 0;
+}
+
+.navbar6 li a.ico2::before {
+  background-position: -60px 0;
+}
+.navbar6 li a.ico3::before {
+  background-position: -180px 0;
+}
+.navbar6 li a.ico4::before {
+  background-position: -240px 0;
+}
+.navbar6 li a.ico5::before {
+  background-position: -300px 0;
+}
+.navbar6 li a.ico6::before {
+  background-position: -360px 0;
+}
+
+.navbar6 li a::after {
+  content: "";
+  display: block;
+  margin: -6px auto 0;
+  height: 4px;
+  width: 0;
+  background-color: rgba(255, 207, 15, 0.5);
+  transition: all 0.3s;
+}
+
+.navbar6 li a:hover::after,
+.navbar6 li a:focus::after {
+  width: 64px;
+}
+
+/* footer */
+footer {
+  border-top: 1px solid #e5e5e5;
+}
+
+footer .footwrap {
+  display: flex;
+  flex-direction: column;
+  width: 980px;
+  height: 145px;
+  margin: 0 auto;
+  padding: 20px 0;
+  font-size: 13px;
+  color: #333;
+}
+
+footer ul.f-nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer ul.f-nav li a {
+  padding: 0 8px 0 9px;
+  letter-spacing: -1px;
+  line-height: 24px;
+}
+
+footer ul.f-nav li + li:before {
+  content: "";
+  display: inline-flex;
+  width: 1px;
+  height: 12px;
+  margin-bottom: 6px;
+  background: #bebebe;
+}
+
+footer ul.f-nav li a strong {
+  font-weight: 700;
+}
+
+footer .info-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 17px 0 25px;
+  width: 100%;
+}
+
+footer .info-group ul.f-list {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+}
+
+footer .info-group ul.f-list li {
+  position: relative;
+}
+
+footer .info-group ul.f-list > li a {
+  width: 89px;
+}
+
+footer .info-group ul.f-list > li:nth-child(3) a {
+  width: 225px;
+}
+
+footer .info-group ul.f-list > li:first-child a.tit {
+  border-color: #666;
+}
+
+footer .info-group ul.f-list a.tit {
+  background: url(../images/bg_select_arr_down2.png) no-repeat 100% 50%;
+}
+
+footer .info-group ul.f-list .tit {
+  display: block;
+  padding: 8px 80px 7px 10px;
+  font-size: 13px;
+  height: 20px;
+  line-height: 17px;
+  border: 1px solid #bbb;
+  white-space: nowrap;
+}
+
+footer .info-group ul.f-list li[class*="ic"] .tit::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px -5px 0;
+}
+
+footer .info-group ul.f-list li.ic1 .tit::before {
+  background: url(../images/ico_footer_phone.png) no-repeat 50% 50%;
+}
+
+footer .info-group ul.f-list li.ic2 .tit::before {
+  background: url(../images/ico_footer_chat.png) no-repeat 50% 50%;
+}
+
+footer ul.f-list li .info {
+  display: none;
+  position: absolute;
+  min-width: 100%;
+  bottom: 37px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #bbb;
+}
+
+footer ul.f-list li:first-child .info {
+  border-color: #666;
+}
+
+footer ul.f-list li:hover .info {
+  display: block;
+}
+
+footer li .info > ul > li a {
+  display: block;
+  line-height: 32px;
+  padding: 0 14px;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+footer ul.f-list li.ic1 .info {
+  min-width: 360px;
+}
+
+footer ul.f-list li.ic1 .info > dl {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 15px;
+}
+
+footer ul.f-list li.ic1 .info > dl > dt {
+  color: #7d5735;
+  font-weight: 700;
+  width: 33%;
+  padding-top: 1em;
+}
+
+footer ul.f-list li.ic1 .info > dd {
+  display: flex;
+  margin: 0;
+  padding-top: 1em;
+}
+
+footer ul.f-list li.ic1 .info > dd + dd {
+  width: 100%;
+  padding-top: 0;
+}
+
+footer ul.f-list li.ic1 .info > dt + dd:not(:nth-child(2)) {
+  width: 66%;
+}
+
+footer ul.f-list li.ic1 .info > dd + dd::before {
+  width: 33%;
+  content: "";
+  padding-top: 0;
+}
+
+footer ul.f-list li.ic1 .info > dl > dd > span {
+  font-weight: 400;
+  display: block;
+}
+
+footer .info-group .info-sns ul {
+  display: flex;
+  overflow: hidden;
+}
+
+footer .info-group .info-sns ul li a {
+  display: block;
+  width: 0;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 0 0 32px;
+  background: url(../images/icon_set1_n2.png) no-repeat 0 -40px;
+  white-space: nowrap;
+}
+
+footer .info-group .info-sns ul li.ic1 a {
+  background-position: 0 -40px;
+}
+
+footer .info-group .info-sns ul li.ic2 a {
+  background-position: -40px -40px;
+}
+
+footer .info-group .info-sns ul li.ic3 a {
+  background-position: -80px -40px;
+}
+
+footer .info-group .info-sns ul li.ic4 a {
+  background-position: -120px -40px;
 }
