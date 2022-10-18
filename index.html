@@ -17,7 +17,7 @@
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 />
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="./js/main.js"></script>
     <title>KB국민은행</title>
   </head>
@@ -132,7 +132,7 @@
                     </li>           
                     <li>
                       <span class="title">KB GLOBAL NETWORK</span>
-                      <ul>
+                      <ul class="nation_grid">
                         <li class="nation1"><a
                           target="_blank" href="javascript:void(0)">Japan</a></li>
                         <li class="nation2"><a  target="_blank" href="javascript:void(0)">UK</a></li>
@@ -171,33 +171,20 @@
           </ul>
         </div>
       </header>
-    
-    <div id="content" class="contentWrap">
-      <div class="main">
-        <!-- 상단 비주얼 -->
-        <div class="wrap-visual">
-          
-            <div class="swiper-container">
-            <ul class="swiper-wrapper">
-              <li class="section section1 swiper-slide">
-                <div>
-                <strong>
-                  <img src="./images/visual_section78_tit01.png" alt="KB스타뱅킹 X KB Pay KB스타뱅킹 페이로 결제하면 결제금액 5% 리워드 적립!">
-                </strong>
-                <span>
-                  <img src="./images/visual_section78_tit02.png" alt="매 월 최대 12,000원 상당 2022.8.1(월)~10.31(월)">
-                </span>
-                <a href="https://omoney.kbstar.com/quics?page=C016559&cc=b033091:b032977&%EC%9D%B4%EB%B2%A4%ED%8A%B8%EC%9D%BC%EB%A0%A8%EB%B2%88%ED%98%B8=332712&QSL=F#loading" title class = "link">바로가기</a>
-              </div>  
-              </li>
-              <li class="section section2 swiper-slide"></li>
-              <li class="section section3 swiper-slide"></li>
-            </ul>
-          </div>
-          <div class="area-control"></div>
-          <div class="area-aside"></div>
-        </div>
+    <div class="contentWrap">
+      <div class="wrap-visual">
+        <div class="area-con">
+          <ul>
+            <li class="section section1 on">
+              <div>
+                <strong><img src="https://www.kbstar.com/2018/img/visual/visual_section78_tit01.png" alt="KB스타뱅킹 X KB Pay KB스타뱅킹 페이로 결제하면 결제금액 5% 리워드 적립!"></strong>
+                <span><img src="https://www.kbstar.com/2018/img/visual/visual_section78_tit02.png" alt="매 월 최대 12,000원 상당 2022.8.1(월)~10.31(월)"></span>
+                <a href="https://omoney.kbstar.com/quics?page=C016559&amp;cc=b033091:b032977&amp;이벤트일련번호=332712&amp;QSL=F" title="" class="link">바로가기</a>
+              </div>
+            </li>
       </div>
+        </div>
+      
       <div class="mid_menu navbar1">
         <h2 class="read">빠른메뉴</h2>
         <ul class="mm_container mm1">
@@ -310,10 +297,11 @@
         </div>
       </div>
       <div class="mid_menu navbar3">
-        <div class="swiper">
           <h2 class="read">인사이트</h2>
           <!-- Additional required wrapper -->
-          <div class="swiper-container">
+          <div class="swiper-bigwrap">
+
+          <div class="swiper-container mid_slide">
           <ul class="swiper-wrapper">
             <!-- Slides -->
             <li class="swiper-slide i1">
@@ -385,7 +373,8 @@
                   <em>서비스</em>
                 </span>
                 <strong class="tit">
-                  <span>KBot SAM</span>
+                  <span></span>
+                  (케이봇쌤)
                 </strong>
                 <span>
                   로봇과 인간이 함께 추천하는
@@ -428,16 +417,15 @@
 
             </li>
           </ul>
+        </div> 
         <div class="area-con">
-          <div class="swiper-button-prev">
-  
-          </div>
+          <div class="swiper-button-prev"></div>
           <div class="swiper-button-pause"></div>
           <div class="swiper-button-play"></div>
           <div class="swiper-button-next"></div>
         </div>
-        </div>
-        </div>
+        
+      </div>
       </div>
       <div class="mid_menu navbar4">
         <div class="section">
@@ -526,6 +514,7 @@
       </div>
     </div>
   </div>
+
       <footer>
         <div class="footwrap">
           <ul class="f-nav">
@@ -636,5 +625,6 @@
         </div>
         </div>
       </footer>
+    </div>
   </body>
 </html>

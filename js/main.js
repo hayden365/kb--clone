@@ -1,22 +1,27 @@
-const swiper = new Swiper(".swiper-container", {
-  // Optional parameters
-  loop: true,
-  slidesPerView: auto,
+function uiIntroSetting() {
+  // 상단 슬라이더
+  $(".wrap-visual").moveContents({
+    effect: "show",
+    autoStop: true,
+    eventEl: ".area-control > ul > li > a",
+    conEl: ".area-con > ul > li",
+    changeTimer: 5000,
+    changeCallBack: function (a) {
+      $(".wrap-visual").attr("class", "wrap-visual active" + (a * 1 + 1));
+    },
+  });
+}
+
+new Swiper(".mid_slide", {
+  slidesPerView: 3,
   autoplay: {
-    delay: 10000,
+    delay: 5000,
   },
-  // Navigation arrows
+  spaceBetween: 20,
+  centeredSlides: true,
+  loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-});
-// 슬라이더 할당한 swiper로 슬라이더 제어
-$(".auto-start").on("click", function () {
-  // 기본 설정으로 autoplay 시작
-  swiper.autoplay.start();
-});
-
-$(".auto-stop").on("click", function () {
-  swiper.autoplay.stop();
 });
