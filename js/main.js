@@ -15,7 +15,7 @@ function uiIntroSetting() {
 new Swiper(".mid_slide", {
   slidesPerView: 3,
   autoplay: {
-    delay: 5000,
+    delay: 3000,
   },
   spaceBetween: 20,
   centeredSlides: true,
