@@ -865,6 +865,7 @@ header ul.sign li.signm .signm_sub a:first-child:after {
 
 /* MID MENU - NAVBAR3 */
 .navbar3 {
+  position: relative;
   margin: 14px auto 30px;
   width: 1000px;
 }
@@ -1121,6 +1122,15 @@ header ul.sign li.signm .signm_sub a:first-child:after {
 
 .navbar3 .swiper-container ul > li.i7 a > span::after {
   background-position: -450px -125px;
+}
+
+.navbar3 .area-con {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
 }
 
 /* MID_MENU - NAVBAR4 */
