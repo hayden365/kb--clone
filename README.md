@@ -27,17 +27,23 @@
 ## 궁금한 점 & 피드백해주셨으면 하는 점
 
 1. html, css에서 class사용이 지저분한것 같은데 피드백 부탁드립니다.
+
    css에서 class 표현 중 > 을 과도하게 썼는지 궁금합니다!
 2. navbar2 메뉴의 div사용이 과다하게 사용한건지 궁금합니다.
+
    flex 를 사용하다보니 div로 묶음이 많아졌는데 시맨틱태그에서 멀어지는 걸까요?
 3. 중단 slide
+
    위에서 언급한것처럼 prev, next, pause, play버튼을 별도로 block과 같이 영역을 주고 정렬하고 싶었는데 display: block, position: absolute, diplay:flex 모두 먹히지가 않습니다. 해결책이 궁금합니다!
    추가로 slide 에서 swiper 사용으로 slidewPerView:3 으로 지정하였으나 슬라이드가 짤려서 나옵니다. margin으로 조정했지만 해결책이 있을까요?
 4. flex나 grid에서 margin, padding
+
    space-around/between/evenly등 을 사용하여 정렬,배치 했지만 몇군데 불가피하게 padding과 margin으로 직접 조정했는데 이부분은 '괜찮은'css사용 인지 궁금합니다!
 5. footer의 두번째 드롭다운메뉴
+
    해당 메뉴는 dl,dt,dd태그의 사용으로 dt와 dd를 수평으로 배치하기 위해서 flex대신 grid를 사용하였는데 괜찮은 선택이었는지 궁금합니다!
 6. 사용자 편의성
+
    마지막으로 기존의 웹사이트에서
    ```
    <h2 class="read">빠른메뉴</h2>
