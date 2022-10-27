@@ -867,7 +867,7 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
 .navbar3 {
   position: relative;
   margin: 14px auto;
-  box-sizing: content-box;
+  box-sizing: border-box;
   width: 1000px;
 }
 
@@ -879,17 +879,14 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   overflow: hidden;
   position: relative;
   margin: 0 0 0 10px;
-  padding-right: 10px;
+  padding-right: 40px;
   height: 286px;
+  width: calc(308px * 3);
 }
 
 .navbar3 .swiper-container ul.swiper-wrapper {
   position: relative;
   height: 246px;
-}
-
-.navbar3 .swiper-container .swiper-slide {
-  border: 1px solid #ddd;
 }
 
 .navbar3 .swiper-container ul > li {
@@ -898,24 +895,35 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   background: #fff;
   border: 1px solid #ddd;
 }
-
+/* .navbar3 .swiper-container ul > li:last-child {
+  right: -30px;
+} */
 .navbar3 .swiper-container ul > li a {
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 2;
-  padding: 0 29px;
+  padding: 0 25px;
   box-shadow: 0 0 0 0 rgb(0 0 0);
   transition: all 0.2s;
+}
+
+.navbar3 .swiper-container ul > li a > span {
+  display: block;
+  color: #929292;
+  line-height: 1.4;
+  letter-spacing: -1px;
 }
 
 .navbar3 .swiper-container ul > li a > span:first-child {
   overflow: hidden;
   display: block;
   position: relative;
-  margin: -1px -30px;
+  margin: -1px -26px;
+  width: 292px;
   height: 125px;
   box-shadow: inset 0 -5px 10px 0 rgb(0 0 0 / 2%);
 }
@@ -942,13 +950,6 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
 
 .navbar3 .swiper-container ul > li a .tit span {
   font-weight: bold;
-}
-
-.navbar3 .swiper-container ul > li a > span {
-  display: block;
-  color: #929292;
-  line-height: 1.4;
-  letter-spacing: -1px;
 }
 
 .navbar3 .swiper-container ul > li a::before,
@@ -1134,14 +1135,16 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
 .navbar3 .swiper-navigation {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: absolute;
   width: 100%;
   margin: 0 auto;
   padding-top: 20px;
   z-index: 1;
 }
+
 .swiper-navigation .prev {
-  margin: 0 12px 0 0;
+  margin: 0 15px 0 0;
 }
 
 .swiper-navigation .prev::before {
@@ -1154,6 +1157,11 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   position: absolute;
   transform: rotate(225deg);
 }
+
+.swiper-navigation .next {
+  margin: 0 0 0 15px;
+}
+
 .swiper-navigation .next::before {
   content: '';
   width: 8px;
@@ -1163,6 +1171,32 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   display: inline-block;
   position: absolute;
   transform: rotate(45deg);
+}
+
+.swiper-navigation .play__off {
+  display: none;
+}
+
+.swiper-navigation .play {
+  display: block;
+  margin: -4px -3px;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-left: 6px solid #bdb8b8;
+}
+
+.swiper-navigation .pause__off {
+  display: none;
+}
+
+.swiper-navigation .pause {
+  display: block;
+  border-color: #bdb8b8;
+  width: 2px;
+  height: 7px;
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
 }
 
 /* MID_MENU - NAVBAR4 */
@@ -1351,7 +1385,7 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   vertical-align: middle;
 }
 
-.navbar5 li.toggle-area .ui-toggle::before {
+.navbar5 li.toggle-area .ui-toggle.on::before {
   content: '';
   width: 5px;
   height: 5px;
@@ -1363,17 +1397,18 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   transform: rotate(135deg);
 }
 
-.navbar5 li.toggle-area > ul {
+.navbar5 li.toggle-area .ui-toggle > ul {
   display: none;
 }
 
-.navbar5 li.toggle-area .ui-toggle:target > ul {
+.navbar5 li.toggle-area .ui-toggle.on > ul {
   display: block;
   position: absolute;
   margin: 8px 0 0 -15px;
   padding: 10px;
   border: 1px solid #ccc;
   background: #fff;
+  z-index: 50;
 }
 
 .navbar5 .right-side {
