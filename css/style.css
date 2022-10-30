@@ -879,9 +879,9 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   overflow: hidden;
   position: relative;
   margin: 0 0 0 10px;
-  padding-right: 40px;
+  padding-right: 35px;
   height: 286px;
-  width: calc(308px * 3);
+  width: calc(320px * 3);
 }
 
 .navbar3 .swiper-container ul.swiper-wrapper {
@@ -923,7 +923,6 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   display: block;
   position: relative;
   margin: -1px -26px;
-  width: 292px;
   height: 125px;
   box-shadow: inset 0 -5px 10px 0 rgb(0 0 0 / 2%);
 }
@@ -1132,6 +1131,8 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   background-position: -450px -125px;
 }
 
+/* swiper-navigation */
+
 .navbar3 .swiper-navigation {
   display: flex;
   justify-content: center;
@@ -1141,6 +1142,7 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   margin: 0 auto;
   padding-top: 20px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .swiper-navigation .prev {
@@ -1173,30 +1175,30 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   transform: rotate(45deg);
 }
 
-.swiper-navigation .play__off {
+.swiper-navigation .play {
   display: none;
 }
 
-.swiper-navigation .play {
+.swiper-navigation .play.show {
   display: block;
-  margin: -4px -3px;
+  margin: 5px 3px 0 17px;
   width: 0;
   height: 0;
   border: 4px solid transparent;
   border-left: 6px solid #bdb8b8;
 }
 
-.swiper-navigation .pause__off {
+.swiper-navigation .pause {
   display: none;
 }
 
-.swiper-navigation .pause {
+.swiper-navigation .pause.show {
   display: block;
-  border-color: #bdb8b8;
+  margin: 6px 5px 0 15px;
   width: 2px;
   height: 7px;
-  border-left: 2px solid #333;
-  border-right: 2px solid #333;
+  border-left: 2px solid #929292;
+  border-right: 2px solid #929292;
 }
 
 /* MID_MENU - NAVBAR4 */
@@ -1375,40 +1377,76 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   border-top: 1px dotted #ccc;
 }
 
-.navbar5 li.toggle-area .ui-toggle {
-  overflow: hidden;
+.navbar5 li.toggle-area span {
+  float: left;
   position: relative;
-  width: 16px;
-  height: 16px;
+}
+
+.navbar5 li.toggle-area .ui-toggle {
+  float: left;
+  margin-right: 5px;
+  margin: 3px 0 0 3px;
+  overflow: hidden;
+  padding-left: 14px;
+  width: 0;
+  height: 14px;
   border: 1px solid #bebebe;
   border-radius: 2px;
   vertical-align: middle;
+  cursor: pointer;
+  background: url(../images/caret-down-solid.svg) no-repeat 3px 0;
 }
 
-.navbar5 li.toggle-area .ui-toggle.on::before {
-  content: '';
-  width: 5px;
-  height: 5px;
-  border-top: 1px solid #000;
-  border-right: 1px solid#000;
-  position: absolute;
-  top: 3px;
-  left: 4px;
-  transform: rotate(135deg);
+.navbar5 li.toggle-area .ui-toggle.show {
+  background: url(../images/caret-up-solid.svg) no-repeat 3px 0;
 }
 
-.navbar5 li.toggle-area .ui-toggle > ul {
+.navbar5 li.toggle-area .ui-toggle ul {
   display: none;
 }
 
-.navbar5 li.toggle-area .ui-toggle.on > ul {
+.navbar5 li.toggle-area .ui-toggle.show ul {
   display: block;
   position: absolute;
+  left: 3px;
+  top: 20px;
   margin: 8px 0 0 -15px;
   padding: 10px;
   border: 1px solid #ccc;
   background: #fff;
-  z-index: 50;
+}
+
+.navbar5 .ui-toggle ul li {
+  display: block;
+  margin: 0 -4px 0 0;
+  padding-left: 11px;
+  width: 160px;
+}
+
+.navbar5 .ui-toggle ul::before,
+.navbar5 .ui-toggle ul::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-color: #bbb;
+}
+.navbar5 .ui-toggle ul::after {
+  top: -13px;
+  border-bottom-color: #fff;
+}
+
+.navbar5 .ui-toggle ul li a {
+  position: relative;
+  padding-left: 8px;
+  font-size: 13px;
+  line-height: 20px;
+  white-space: nowrap;
+  color: #888;
 }
 
 .navbar5 .right-side {
@@ -1663,7 +1701,7 @@ footer ul.f-list li.ic1 .info > dl {
   display: grid;
   grid-template-columns: 33% auto;
   height: 100%;
-  margin: 0 15px;
+  margin: 0 15px 10px 15px;
 }
 
 footer ul.f-list li.ic1 .info dt {
@@ -1765,6 +1803,7 @@ footer .info-mark li.ic2 span {
   background: url(../images/wa_mark_2022.png) no-repeat 0 0;
   background-size: auto 100%;
 }
+
 footer .info-group ul li.dropdown ul li:hover {
   background: #ffe85a;
 }

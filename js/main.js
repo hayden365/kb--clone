@@ -28,19 +28,22 @@ const midSwiper = new Swiper('.mid_slide', {
 
 const swiperPlay = document.querySelector('.play');
 const swiperPause = document.querySelector('.pause');
-swiperPlay.addEventListener('click', () => {
-  swiperPause.classList.add('__off');
-  swiperPlay.classList.remove('__off');
-  midSwiper.autoplay.start();
-});
 swiperPause.addEventListener('click', () => {
-  swiperPause.classList.remove('__off');
-  swiperPlay.classList.add('__off');
+  swiperPause.classList.remove('show');
+  swiperPlay.classList.add('show');
   midSwiper.autoplay.stop();
+});
+swiperPlay.addEventListener('click', () => {
+  swiperPlay.classList.remove('show');
+  swiperPause.classList.add('show');
+  midSwiper.autoplay.start();
 });
 
 const ui_toggle = document.querySelector('.ui-toggle');
-const ui_toggle_on = document.querySelector('ui-toggle.on');
 ui_toggle.addEventListener('click', () => {
-  ui_toggle.classList.remove('on');
+  if (ui_toggle.classList.contains('show')) {
+    ui_toggle.classList.remove('show');
+  } else {
+    ui_toggle.classList.add('show');
+  }
 });
