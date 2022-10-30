@@ -24,7 +24,7 @@ strong {
   display: inline-block;
 }
 
-.read {
+.read-only {
   overflow: hidden;
   width: 1px;
   height: 1px;
@@ -117,7 +117,7 @@ header ul.gnb > li.m9::before {
   display: flex;
   width: 1px;
   height: 12px;
-  margin: 10.5px 0 9px -7px;
+  margin: 10px 0 9px -7px;
   background-color: #c0c0c2;
 }
 
@@ -871,10 +871,6 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   width: 1000px;
 }
 
-.navbar3 .swiper-bigwrap {
-  position: relative;
-}
-
 .navbar3 .swiper-container {
   overflow: hidden;
   position: relative;
@@ -1139,9 +1135,7 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   align-items: center;
   position: absolute;
   width: 100%;
-  margin: 0 auto;
   padding-top: 20px;
-  z-index: 1;
   cursor: pointer;
 }
 
@@ -1241,7 +1235,6 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
 
 .navbar4 .section ul.nav-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .navbar4 .section ul.nav-list li {
@@ -1306,9 +1299,6 @@ header ul.sign li.sign2 .sign2_sub a:first-child:after {
   margin: 20px auto 0;
 }
 
-.navbar5 .left-side {
-  display: grid;
-}
 .navbar5 .section_nav5 {
   display: flex;
   width: 725px;
